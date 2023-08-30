@@ -1,0 +1,21 @@
+body{
+    background-image: url(yellowpaper.png);
+    background-attachment: fixed;
+    background-size: 10in;
+}
+
+h1{
+    transform: translateY(42px);
+    font-size: 50px;
+    text-shadow: 4px 4px 4px darkgrey;
+    margin: auto;
+    color: red;
+    font-family: "Schoolbell";
+}
+
+h2{
+    transform: translateY(20px);
+    text-shadow: 4px 4px 4px darkgrey;
+    color:red;
+    font-family: "Schoolbell"
+}

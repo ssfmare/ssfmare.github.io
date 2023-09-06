@@ -2,17 +2,34 @@
 <html>
 <head>
   <title>Part 2</title>
+  <link rel="stylesheet"  href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+  <style>
+    a {
+        color: red;
+    }
+</style>
 </head>
 <body>
-    <br>
+    <h2>
+        ‎• <a href="hw2p1.html" target=_self title="Part 1">
+            part 1
+        </a>
+            <br>
+            <br>
+            ‎• <a href="hw2.html" target=_self title="Homework 2">
+            homework 2 - basic operations
+        </a>
+        <br>
+        <br>
   <form id="numberForm">
-    <label for="num1">Number 1: </label>
+    <label for="num1">number 1: </label>
     <input type="text" id="num1" name="num1" required><br><br>
     <br>
-    <label for="num2">Number 2: </label>
+    <label for="num2">number 2: </label>
     <input type="text" id="num2" name="num2" required><br><br>
     <br>
-    <label for="num3">Number 3: </label>
+    <label for="num3">number 3: </label>
     <input type="text" id="num3" name="num3" required><br><br>
     <br>
     <button type="button" onclick="calculate()">Process</button>
@@ -29,7 +46,7 @@
       const num3 = parseFloat(document.getElementById("num3").value);
 
       const resultTextArea = document.getElementById("result");
-      resultTextArea.value = ''; // Clear previous results
+      resultTextArea.value = ''; 
 
       if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
         resultTextArea.value = "Error: Please Enter A Valid Number In All The Fields.";
@@ -52,13 +69,6 @@
   </script>
     <br>
     <br>
-  <a href="hw2p1.html" target=_self title="Part 1">
-    Part 1
-</a>
-    <br>
-    <br>
-<a href="hw2.html" target=_self title="Homework 2">
-    Homework 2 - Basic Operations
-</a>
+    </h2>
 </body>
 </html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Homework 4 - Part 2</title>
+  <script type="text/javascript">
+    function calculateCompoundInterest() {
+      // Create an array of interest rates
+      var interestRates = [0.05, 0.06, 0.07];
+
+      // Loop through interest rates
+      for (var i = 0; i < interestRates.length; i++) {
+        var rate = interestRates[i];
+        var table = document.createElement("table");
+        var headerRow = table.insertRow(0);
+        var headerCell1 = headerRow.insertCell(0);
+        var headerCell2 = headerRow.insertCell(1);
+        var headerCell3 = headerRow.insertCell(2);
+        headerCell1.innerHTML = "Year";
+        headerCell2.innerHTML = "Amount on deposit";
+        headerCell3.innerHTML = "Interest Rate";
+
+        // Loop through years
+        for (var year = 1; year <= 5; year++) {
+          var newRow = table.insertRow(year);
+          var yearCell = newRow.insertCell(0);
+          var amountCell = newRow.insertCell(1);
+          var rateCell = newRow.insertCell(2);
+
+          yearCell.innerHTML = year;
+          var amount = 1000 * Math.pow((1 + rate), year);
+          amountCell.innerHTML = amount.toFixed(2);
+          rateCell.innerHTML = rate.toFixed(2);
+        }
+
+        // Append the table to the body
+        document.body.appendChild(table);
+      }
+    }
+  </script>
+  <style>
+    table {
+      width: 50%;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #333;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body onload="calculateCompoundInterest()">
+  <h1>Learn about Compound Interest</h1>
+</body>
+</html>

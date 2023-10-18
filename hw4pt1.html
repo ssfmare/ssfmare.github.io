@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Homework 4 - Part 1</title>
+  <script type="text/javascript">
+    function calculateProductsAndSums() {
+      // Using for loop
+      var productFor = 1;
+      var sumFor = 0;
+      for (var i = 5; i <= 25; i += 4) {
+        productFor *= i;
+        sumFor += i;
+      }
+
+      // Using while loop
+      var productWhile = 1;
+      var sumWhile = 0;
+      var j = 3;
+      while (j <= 18) {
+        productWhile *= j;
+        sumWhile += j;
+        j += 3;
+      }
+
+      document.getElementById("resultFor").innerHTML = `The result of 5 * 9 * 13 * 17 * 21 * 25 is ${productFor.toLocaleString()}`;
+      document.getElementById("sumFor").innerHTML = `The result of 5 + 9 + 13 + 17 + 21 + 25 is ${sumFor.toLocaleString()}`;
+      document.getElementById("resultWhile").innerHTML = `The result of 3 * 6 * 9 * 12 * 15 * 18 is ${productWhile.toLocaleString()}`;
+      document.getElementById("sumWhile").innerHTML = `The result of 3 + 6 + 9 + 12 + 15 + 18 is ${sumWhile.toLocaleString()}`;
+    }
+  </script>
+</head>
+<body onload="calculateProductsAndSums()">
+  <h1>Part 1 - Looping Statements</h1>
+  <div id="resultFor"></div>
+  <div id="sumFor"></div>
+  <div id="resultWhile"></div>
+  <div id="sumWhile"></div>
+</body>
+</html>
